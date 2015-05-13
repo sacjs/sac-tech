@@ -17,6 +17,12 @@
     "url": "https://github.com/sacjs/sac-tech/issues"
   },
   "homepage": "https://github.com/sacjs/sac-tech",
+  "dependencies": {
+    "convict": "^0.7.0",
+    "hapi": "^8.4.0",
+    "lodash": "^3.8.0",
+    "slackin": "^0.5.0"
+  },
   "devDependencies": {
     "eslint": "^0.21.0"
   }
