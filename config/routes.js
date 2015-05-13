@@ -19,7 +19,7 @@ var SlackinRoutes = _.map(SlackinPaths, function(slackPath) {
       proxy: {
         host: env.get('host'),
         port: env.get('slackinPort'),
-        protocol: 'http',
+        protocol: process.env.NODE_ENV === 'development' ? 'http' : 'https',
         passThrough: true,
         xforward: true
       }
