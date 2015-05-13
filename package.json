@@ -1,0 +1,20 @@
+{
+  "name": "sac-tech",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sacjs/sac-tech.git"
+  },
+  "author": "Derek Lindahl <derek@jsconf.us>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sacjs/sac-tech/issues"
+  },
+  "homepage": "https://github.com/sacjs/sac-tech"
+}
