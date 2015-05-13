@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/sacjs/sac-tech/issues"
   },
-  "homepage": "https://github.com/sacjs/sac-tech"
+  "homepage": "https://github.com/sacjs/sac-tech",
+  "devDependencies": {
+    "eslint": "^0.21.0"
+  }
 }
