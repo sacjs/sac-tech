@@ -2,10 +2,12 @@
 
 var path = require('path');
 var convict = require('convict');
-
 var Root = path.resolve('.');
+var config;
 
-var config = convict({
+require('dotenv').load();
+
+config = convict({
   env: {
     doc: 'The application environment',
     format: ['production', 'staging', 'development', 'test'],
