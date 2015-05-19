@@ -1,10 +1,10 @@
 'use strict';
 
-var hapi = require('hapi');
-
 var app = require('./application');
 var env = require('./environment');
+var hapi = require('hapi');
 var pkg = require('../package.json');
+var SlackSource = require('../app/datasources/slack');
 
 // Create the server
 var server = new hapi.Server(require('./server.js'));
@@ -18,16 +18,11 @@ app.routes.forEach(function(route) {
   server.route(route);
 });
 
-// Starts the Slackin server
-console.log('Starting Slackin service on port %d', env.get('slackinPort'));
-require('slackin')({
-  channels: env.get('slackChannel'),
+SlackSource.initialize({
   interval: env.get('slackinInterval'),
   org: env.get('slackSubdomain'),
-  silent: false,
   token: env.get('slackApiToken')
-}).listen(env.get('slackinPort'));
-
+});
 
 // Starts the server with pretty-printed output
 function startServer() {
