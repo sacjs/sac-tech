@@ -10,6 +10,10 @@ module.exports = [{
     file: path.join(env.get('publicAssets'), '..', 'index.html')
   }
 }, {
+  method: 'POST',
+  path: '/invite',
+  handler: require('../app/handlers/inviteHandler')
+}, {
   method: 'GET',
   path: '/status',
   handler: require('../app/handlers/statusHandler')
