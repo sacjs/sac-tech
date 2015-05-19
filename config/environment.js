@@ -5,7 +5,9 @@ var convict = require('convict');
 var Root = path.resolve('.');
 var config;
 
-require('dotenv').load();
+if(process.env.NODE_ENV !== 'production') {
+  require('dotenv').load();
+}
 
 config = convict({
   env: {
