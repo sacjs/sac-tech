@@ -9,7 +9,6 @@ var SlackSource = require('../app/datasources/slack');
 // Create the server
 var server = new hapi.Server(require('./server.js'));
 server.connection({
-  host: env.get('host'),
   port: env.get('port'),
   labels: 'web'
 });
