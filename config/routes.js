@@ -11,6 +11,10 @@ module.exports = [{
   }
 }, {
   method: 'GET',
+  path: '/status',
+  handler: require('../app/handlers/statusHandler')
+}, {
+  method: 'GET',
   path: '/assets/{param*}',
   handler: {
     directory: {
