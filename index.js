@@ -8,6 +8,13 @@ async function init() {
   // Create the server
   const server = Hapi.server({
     port: env.get('port'),
+    mime: {
+      override: {
+        'text/event-stream': {
+          compressible: false
+        }
+      }
+    }
   });
   await server.register(require('@hapi/inert'));
 

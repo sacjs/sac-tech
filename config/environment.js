@@ -41,7 +41,7 @@ config = convict({
     format: '*'
   },
   slackinInterval: {
-    default: 1000,
+    default: 60000,
     doc: 'The interval with which to poll Slack for active user info',
     env: 'SLACKIN_INTERVAL',
     format: 'int'

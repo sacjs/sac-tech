@@ -61,7 +61,9 @@ function pollSlack() {
 }
 
 function startPollingSlack() {
-  pollSlack();
+  pingSlack()
+    .tap(pollSlack)
+    .catch(emptyFn);
 }
 
 module.exports = {

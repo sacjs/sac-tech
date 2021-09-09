@@ -15,7 +15,7 @@ var __teamIcon = null;
 var __totalUserCount = 0;
 
 function countUsers(data) {
-  var users = _.filter(data.users, function(user) {
+  const users = _.filter(data.users, function(user) {
     return user.id !== SLACKBOT_ID && !user.is_bot;
   });
   __totalUserCount = users.length;
@@ -59,6 +59,9 @@ token = AppDispatcher.register(function(payload) {
       break;
     case SlackConstants.SLACK_REFRESH_END:
       refreshing(false);
+      break;
+    case SlackConstants.SLACK_REFRESH_ERROR:
+      console.error(action.error)
       break;
     default:
       return true;
