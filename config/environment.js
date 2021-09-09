@@ -6,7 +6,7 @@ var Root = path.resolve('.');
 var config;
 
 if(process.env.NODE_ENV !== 'production') {
-  require('dotenv').load();
+  require('dotenv').config();
 }
 
 config = convict({
