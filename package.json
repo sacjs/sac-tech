@@ -27,7 +27,7 @@
     "keymirror": "^0.1.1",
     "lodash": "^4.17.21",
     "slackin": "^0.5.0",
-    "superagent": "^1.2.0",
+    "superagent": "^6.1.0",
     "url-template": "^2.0.6",
     "when": "^3.7.3"
   },
