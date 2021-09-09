@@ -31,6 +31,6 @@
     "when": "^3.7.3"
   },
   "devDependencies": {
-    "eslint": "^0.21.0"
+    "eslint": "^7.32.0"
   }
 }
