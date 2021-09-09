@@ -14,12 +14,12 @@ function streamer(channel) {
   channel.write('data: ' + JSON.stringify(state) + '\n\n');
 }
 
-module.exports = function statusHandler(request, reply) {
+module.exports = function statusHandler(request, h) {
   var channel = new PassThrough();
   var listener = _.partial(streamer, channel);
   SlackStore.subscribe(listener);
   request.raw.req.on('close', function() {
     SlackStore.unsubscribe(listener);
   });
-  reply(channel).type('text/event-stream');
+  return h.response(channel).type('text/event-stream');
 };

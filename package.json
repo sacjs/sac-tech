@@ -19,10 +19,11 @@
   },
   "homepage": "https://github.com/sacjs/sac-tech",
   "dependencies": {
+    "@hapi/hapi": "^20.1.5",
+    "@hapi/inert": "^6.0.4",
     "convict": "^0.7.0",
     "dotenv": "^1.1.0",
     "flux": "^2.0.3",
-    "hapi": "^8.4.0",
     "keymirror": "^0.1.1",
     "lodash": "^3.8.0",
     "slackin": "^0.5.0",
